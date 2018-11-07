@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { Text, View } from 'react-native'
+import colors from '../Theme/Tema1';
 
-export default class Social extends Component {
+export default class Progreso extends Component {
   static navigationOptions = {
-    title: 'Social'
+    title: 'Progreso'
   };
   render() {
     return (

@@ -1,8 +1,10 @@
 import { createDrawerNavigator } from 'react-navigation';
-import Profile from '../components/Profile';
+import Profile from '../../components/Profile';
 import AppBottom from './AppBottom';
 
 export default createDrawerNavigator({
-  AppBottom: AppBottom,
+  Inicio: AppBottom,
   Profile: Profile 
+},{
+  initialRouteName: 'Inicio'
 });
