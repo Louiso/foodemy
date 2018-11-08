@@ -1,14 +1,14 @@
 import { createSwitchNavigator } from 'react-navigation';
-import AuthLoading from '../components/AuthLoading';
-import AppDrawer from './AppDrawer';
-import AuthSwitch from './AuthSwitch';
+import Loader from './Loader';
+import RutaAplicacion from './RutaAplicacion';
+import RutaNuevo from './RutaNuevo';
 
 export default createSwitchNavigator({
-  AuthLoading: AuthLoading,
-  AppDrawer: AppDrawer,
-  AuthSwitch: AuthSwitch
+  Loader: Loader,
+  RutaNuevo: RutaNuevo,
+  RutaAplicacion: RutaAplicacion
 },{
-  initialRouteName: 'AppDrawer'
+  initialRouteName: 'Loader'
 });
 
 

@@ -2,7 +2,6 @@ import React from 'react';
 import { createBottomTabNavigator } from 'react-navigation';
 import SocialStack from './SocialStack';
 import ProgresoStack from './ProgresoStack';
-
 import { Icon } from 'native-base';
 import TestStack from './TestStack';
 export default createBottomTabNavigator({

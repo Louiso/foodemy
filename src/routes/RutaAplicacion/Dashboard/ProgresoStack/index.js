@@ -1,15 +1,12 @@
-import { createStackNavigator } from 'react-navigation';
-import Social from '../../../../components/Social';
+import { createStackNavigator } from 'react-navigation'
 import colors from '../../../../Theme/Tema1';
-
+import Progreso from './Progreso';
 export default createStackNavigator({
-  Social: Social
+  Progreso: Progreso,
 },{
   navigationOptions: {
-    title: 'Social',
     headerStyle: {
       backgroundColor: colors.primary,
-    },
-    
-  }
+    }
+  },
 });

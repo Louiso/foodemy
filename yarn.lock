@@ -647,6 +647,11 @@
     pouchdb-collections "^1.0.1"
     tiny-queue "^0.2.1"
 
+"@tanem/svg-injector@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@tanem/svg-injector/-/svg-injector-1.2.1.tgz#3120e90246d0eb3c4fc6c61586a6f028a3c658ae"
+  integrity sha512-mA5Q5ulPoGQ+e08Vts1R6xw2QU0BKEnMH/KcqoYoS7Gk6imvMTpyFPeu1g+NOZObSIoAzA3/kRzY8m96cEBA2A==
+
 "@types/fbemitter@^2.0.32":
   version "2.0.32"
   resolved "https://registry.yarnpkg.com/@types/fbemitter/-/fbemitter-2.0.32.tgz#8ed204da0f54e9c8eaec31b1eec91e25132d082c"
@@ -5108,7 +5113,7 @@ react-native-screens@^1.0.0-alpha.11:
   resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-1.0.0-alpha.16.tgz#e3651b7077ea8fa04e8dd3265ad9b87f1f77a758"
   integrity sha512-t+/aq5jQa+Is6afiQHa1P+2UPnwPGY9NT0pSqNr2zQ5llCn8TcPq6GN8xDMuEc08g+y/9R5zWo32hlVStwWn1A==
 
-react-native-svg@8.0.8:
+react-native-svg@8.0.8, react-native-svg@^8.0.8:
   version "8.0.8"
   resolved "https://registry.yarnpkg.com/react-native-svg/-/react-native-svg-8.0.8.tgz#5d4c636751d9db2d98a9b3cfc4ef45c4eac65d60"
   integrity sha512-a5q7896HJztH3XBa4MouuBcwhOvDsJXRZB/PPvEMvc4NhudIDXDUKpwd9V7Hm6beDjg5CjFIdE/c92jnVo+0CA==
@@ -5264,6 +5269,15 @@ react-proxy@^1.1.7:
   dependencies:
     lodash "^4.6.1"
     react-deep-force-update "^1.0.0"
+
+react-svg@^6.0.24:
+  version "6.0.24"
+  resolved "https://registry.yarnpkg.com/react-svg/-/react-svg-6.0.24.tgz#6b33569a8e58e6179b58a2d79d1244ef4482c67a"
+  integrity sha512-YdQDvzshcC0dJEngvZhTm/dJPV8631t0RfrQXMZpTryWFO24t1/D8jwpkDXJPKrOlK27R67Ag5reo3HK4ixnKA==
+  dependencies:
+    "@babel/runtime" "^7.1.2"
+    "@tanem/svg-injector" "^1.2.1"
+    prop-types "^15.6.2"
 
 react-timer-mixin@^0.13.2:
   version "0.13.4"

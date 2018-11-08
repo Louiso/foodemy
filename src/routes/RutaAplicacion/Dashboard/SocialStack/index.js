@@ -1,11 +1,12 @@
 import { createStackNavigator } from 'react-navigation';
 import colors from '../../../../Theme/Tema1';
-import Test from '../../../../components/Test';
+import Social from './Social';
+
 export default createStackNavigator({
-  Social: Test
+  Social: Social
 },{
   navigationOptions: {
-    title: 'Test',
+    title: 'Social',
     headerStyle: {
       backgroundColor: colors.primary,
     },

@@ -14,8 +14,8 @@ import {
   Container
 } from 'native-base';
 
-import DissmissKeyboard from '../DissmissKeyboard';
-import colors from '../../Theme/Tema1';
+import DissmissKeyboard from '../../../components/DissmissKeyboard';
+import colors from '../../../Theme/Tema1';
 
 export default class Register extends Component {
   state = {

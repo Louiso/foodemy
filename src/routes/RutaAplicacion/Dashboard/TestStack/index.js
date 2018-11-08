@@ -1,12 +1,15 @@
-import { createStackNavigator } from 'react-navigation'
-import Progreso from '../../../../components/Progreso';
+import { createStackNavigator } from 'react-navigation';
 import colors from '../../../../Theme/Tema1';
+import Test from './Test';
+
 export default createStackNavigator({
-  Progreso: Progreso,
+  Test: Test
 },{
   navigationOptions: {
+    title: 'Test',
     headerStyle: {
       backgroundColor: colors.primary,
-    }
-  },
+    },
+    
+  }
 });
