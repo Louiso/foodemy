@@ -1,17 +1,24 @@
 import React, { Component } from 'react'
-import { Text, View , StyleSheet } from 'react-native'
+import { Text, View , StyleSheet ,TouchableWithoutFeedback } from 'react-native'
 
 export default class Intro extends Component {
+  next = () => {
+    const { navigation } = this.props;
+    navigation.navigate('Intro2');
+  }
   render() {
     return (
       <View style = {styles.Container }>
         <View style = { styles.Content }>
           <Text style = { styles.Pregunta }>¿Haces dieta y no bajas de peso?</Text>
           <View style = { styles.Respuestas }>
+            
             <Text style = { styles.Respuesta }>Si</Text>
             <Text style = { styles.Respuesta }>No</Text>
           </View>
-          <Text style = { styles.Continuar }>continuar</Text>
+          <TouchableWithoutFeedback onPress = { this.next }>
+            <Text style = { styles.Continuar }>continuar</Text>
+          </TouchableWithoutFeedback>
           <Text style = { styles.IniciarSession }>Tengo Cuenta</Text>
         </View>
       </View>

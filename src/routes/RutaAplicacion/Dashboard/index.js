@@ -3,12 +3,12 @@ import { createBottomTabNavigator } from 'react-navigation';
 import SocialStack from './SocialStack';
 import ProgresoStack from './ProgresoStack';
 import { Icon } from 'native-base';
-import TestStack from './TestStack';
+import RecetasStack from './RecetasStack';
 export default createBottomTabNavigator({
-  TestStack: {
-    screen: TestStack,
+  RecetasStack: {
+    screen: RecetasStack,
     navigationOptions:{
-      tabBarLabel: 'Test',
+      tabBarLabel: 'Recetas',
       tabBarIcon: ({tintColor}) => (
         <Icon name='group' type="MaterialIcons"/>
       )

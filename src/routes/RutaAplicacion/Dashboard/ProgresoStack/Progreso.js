@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-import { Text, View , StyleSheet , ScrollView, Dimensions, FlatList ,Image } from 'react-native'
+import { View , StyleSheet , ScrollView } from 'react-native'
 import Robot1 from '../../../../components/Robot1';
 
-import { Header , createBottomTabNavigator } from 'react-navigation'; 
-
-const { width , height } = Dimensions.get('window');
+import Section from '../../../../components/Section';
 
 const data = [
   {
@@ -52,25 +50,9 @@ export default class Progreso extends Component {
           <View style = { styles.Robot }>
             <Robot1/>
           </View>
-          <View style = { styles.Section }>
-            <Text style = { styles.SectionTitle }>Basico :</Text>
-            <FlatList
-              horizontal
-              data = { data }
-              renderItem  = { ({item}) => {
-                return(
-                  <View style = { styles.Card }>
-                    <Image style = { styles.CardImage } source = {{
-                      uri: item.img,
-                      width: 104,
-                      height: 104
-                    }}/>
-                    <Text style = { styles.CardText }>{item.name + item.key}</Text>
-                  </View>
-                );
-              }}
-            />
-          </View>
+          <Section name = "Basico" data = {data}/>         
+          <Section name = "Intermedio" data = {data}/>
+          <Section name = "Avanzado" data = {data}/>
         </ScrollView>
 
       </View>
@@ -80,14 +62,11 @@ export default class Progreso extends Component {
 
 const styles = StyleSheet.create({
   Container:{
-    height: height - Header.HEIGHT - createBottomTabNavigator.HEIGHT
+    flex: 1
   },
   Robot:{
-    marginTop: 16,
-    marginBottom: 16,
+    marginTop: 38,
+    marginBottom: 38,
     alignItems: 'center',
   },
-  Card: {
-
-  }
 });

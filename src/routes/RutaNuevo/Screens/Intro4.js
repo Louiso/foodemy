@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
-import { Text, View , StyleSheet , TextInput } from 'react-native'
+import { Text, View , StyleSheet , TextInput , TouchableWithoutFeedback} from 'react-native'
 
 export default class Intro4 extends Component {
+  next = () => {
+    const { navigation } = this.props;
+    navigation.navigate('Register');
+  }
   render() {
     return (
       <View style = {styles.Container }>
@@ -39,7 +43,9 @@ export default class Intro4 extends Component {
               </View>
             </View>
           </View>
-          <Text style = { styles.Continuar }>continuar</Text>
+          <TouchableWithoutFeedback onPress = {this.next}>
+            <Text style = { styles.Continuar }>continuar</Text>
+          </TouchableWithoutFeedback>
         </View>
       </View>
     )

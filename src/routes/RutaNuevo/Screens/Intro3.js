@@ -1,9 +1,13 @@
 import React, { Component } from 'react'
-import { Text, View , StyleSheet } from 'react-native'
+import { Text, View , StyleSheet, TouchableWithoutFeedback } from 'react-native'
 import Robot1 from '../../../components/Robot1';
 
 // Constant : statusbarHeight
 export default class Intro3 extends Component {
+  next = () => {
+    const { navigation } = this.props;
+    navigation.navigate('Intro4');
+  }
   render() {
     return (
       <View style = {styles.Container }>
@@ -11,7 +15,9 @@ export default class Intro3 extends Component {
           <Text style = { styles.Lema }>Conocer tu cuerpo  y saber como funciona es la clave para lograr el EXITO!!</Text>
           <Robot1/>
           <Text style = { styles.Extra }>Te presento a MetaBot, representa tu metabolismo y a medida que aumentes tus conocimientos evolucionara</Text>
-          <Text style = { styles.Continuar }>continuar</Text>
+          <TouchableWithoutFeedback onPress = {this.next}>
+            <Text style = { styles.Continuar }>continuar</Text>
+          </TouchableWithoutFeedback>
         </View>
       </View>
     )
