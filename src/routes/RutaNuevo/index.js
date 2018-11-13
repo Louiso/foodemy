@@ -26,7 +26,7 @@ const RutaNuevo = createSwitchNavigator({
     screen: Register
   }
 },{
-  initialRouteName: 'Register'
+  initialRouteName: 'Intro'
 });
 
 export default RutaNuevo;

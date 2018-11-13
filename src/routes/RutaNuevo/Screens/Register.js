@@ -1,8 +1,13 @@
 import React, { Component } from 'react'
-import { Text, View, StyleSheet, TextInput } from 'react-native'
+import { Text, View, StyleSheet, TouchableWithoutFeedback} from 'react-native'
 import Robot1 from '../../../components/Robot1';
+import Input from '../../../components/Input';
 
 export default class Register extends Component {
+  register = () => {
+    const { navigation } = this.props;
+    navigation.navigate('Progreso');
+  }
   render() {
     return (
       <View style = { styles.Container }>
@@ -10,22 +15,12 @@ export default class Register extends Component {
           <Text style = { styles.Title }> Foodemy </Text>
           <Robot1/>
           <View style = {styles.Form}>
-            <View style = { styles.GroupInput }>
-              <Text style = {styles.Label}>Nombre de usuario :</Text>
-              <TextInput style = {styles.TextInput}/>
-              <View style = { styles.Line }/>
-            </View>
-            <View style = { styles.GroupInput }>
-              <Text style = {styles.Label}>Correo :</Text>
-              <TextInput style = {styles.TextInput}/>
-              <View style = { styles.Line }/>
-            </View>
-            <View style = { styles.GroupInput }>
-              <Text style = {styles.Label}>Contraseña :</Text>
-              <TextInput style = {styles.TextInput}/>
-              <View style = { styles.Line }/>
-            </View>
-            <Text style = { styles.IniciarSesion }>Iniciar Sesion</Text>
+            <Input label = "Nombre de usuario"/>
+            <Input label = "Correo"/>
+            <Input label = "Contraseña"/>
+            <TouchableWithoutFeedback onPress = { this.register  }>
+              <Text style = { styles.IniciarSesion }>Iniciar Sesion</Text>
+            </TouchableWithoutFeedback>
           </View>
         </View>
       </View>

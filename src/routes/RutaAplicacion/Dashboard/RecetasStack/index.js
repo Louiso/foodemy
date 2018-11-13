@@ -1,12 +1,12 @@
 import { createStackNavigator } from 'react-navigation';
 import colors from '../../../../Theme/Tema1';
-import Test from './Test';
+import Recetas from './Recetas';
 
 export default createStackNavigator({
-  Test: Test
+  Recetas: Recetas
 },{
   navigationOptions: {
-    title: 'Test',
+    title: 'Recetas',
     headerStyle: {
       backgroundColor: colors.primary,
     },

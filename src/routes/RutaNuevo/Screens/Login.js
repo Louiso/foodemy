@@ -1,8 +1,13 @@
 import React, { Component } from 'react'
-import { Text, View, StyleSheet, TextInput } from 'react-native'
+import { Text, View, StyleSheet , TouchableWithoutFeedback} from 'react-native'
 import Robot1 from '../../../components/Robot1';
+import Input from '../../../components/Input';
 
 export default class Login extends Component {
+  login = () => {
+    const { navigation } = this.props;
+    navigation.navigate('Progreso');
+  }
   render() {
     return (
       <View style = { styles.Container }>
@@ -10,17 +15,11 @@ export default class Login extends Component {
           <Text style = { styles.Title }> Foodemy </Text>
           <Robot1/>
           <View style = {styles.Form}>
-            <View style = { styles.GroupInput }>
-              <Text style = {styles.Label}>Correo :</Text>
-              <TextInput style = {styles.TextInput}/>
-              <View style = { styles.Line }/>
-            </View>
-            <View style = { styles.GroupInput }>
-              <Text style = {styles.Label}>Contraseña :</Text>
-              <TextInput style = {styles.TextInput}/>
-              <View style = { styles.Line }/>
-            </View>
-            <Text style = { styles.IniciarSesion }>Iniciar Sesion</Text>
+            <Input label = "Correo"/>
+            <Input label = "Contraseña"/>
+            <TouchableWithoutFeedback onPress = { this.login }>
+              <Text style = { styles.IniciarSesion }>Iniciar Sesion</Text>
+            </TouchableWithoutFeedback>
           </View>
         </View>
       </View>
@@ -44,22 +43,7 @@ const styles = StyleSheet.create({
   Form: {
     marginTop: 40,
   },
-  GroupInput:{
-    width: 256,
-    marginBottom: 28,
-  },
-  Label: {
-    fontFamily: 'poiret-one-regular',
-    fontSize: 14,
-    opacity: 0.5
-  },
-  TextInput:{
-
-  },
-  Line:{
-    borderWidth: 0.5,
-    opacity: 0.2
-  },
+  
   IniciarSesion: {
     fontFamily: 'hind-bold',
     fontSize: 24,
