@@ -4,6 +4,8 @@ import Login from './Screens/Login';
 import Register from './Screens/Register';
 import Intro2 from './Screens/Intro2';
 import Intro3 from './Screens/Intro3';
+import Intro4 from './Screens/Intro4';
+
 const RutaNuevo = createSwitchNavigator({
   Intro:{
     screen: Intro
@@ -14,6 +16,9 @@ const RutaNuevo = createSwitchNavigator({
   Intro3:{
     screen: Intro3
   },
+  Intro4:{
+    screen: Intro4
+  },
   Login: {
     screen: Login
   },
@@ -21,7 +26,7 @@ const RutaNuevo = createSwitchNavigator({
     screen: Register
   }
 },{
-  initialRouteName: 'Intro3'
+  initialRouteName: 'Register'
 });
 
 export default RutaNuevo;

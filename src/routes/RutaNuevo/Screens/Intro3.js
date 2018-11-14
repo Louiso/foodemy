@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Text, View , StyleSheet } from 'react-native'
-import Robot1 from './Robot1.js'
+import Robot1 from '../../../components/Robot1';
 
 // Constant : statusbarHeight
 export default class Intro3 extends Component {

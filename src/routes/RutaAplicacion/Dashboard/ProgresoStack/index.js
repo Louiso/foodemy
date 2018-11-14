@@ -2,7 +2,12 @@ import { createStackNavigator } from 'react-navigation'
 import colors from '../../../../Theme/Tema1';
 import Progreso from './Progreso';
 export default createStackNavigator({
-  Progreso: Progreso,
+  Progreso: {
+    screen: Progreso,
+    navigationOptions : {
+      title: 'Progreso'
+    }
+  }
 },{
   navigationOptions: {
     headerStyle: {

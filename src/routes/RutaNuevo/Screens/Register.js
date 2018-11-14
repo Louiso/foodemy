@@ -1,133 +1,75 @@
 import React, { Component } from 'react'
-import { 
-  Text,
-  View,
-  TouchableHighlight,
-  StyleSheet
-} from 'react-native'
-
-import { 
-  Form,
-  Item,
-  Input,
-  Label,
-  Container
-} from 'native-base';
-
-import DissmissKeyboard from '../../../components/DissmissKeyboard';
-import colors from '../../../Theme/Tema1';
+import { Text, View, StyleSheet, TextInput } from 'react-native'
+import Robot1 from '../../../components/Robot1';
 
 export default class Register extends Component {
-  state = {
-    username: '',
-    password: '',
-    email: ''
-  }
   render() {
-    const  { username , password, email } = this.state;
     return (
-      <DissmissKeyboard>
-        <Container style = { styles.Container }>
-          <View style = { styles.Content }>
-
-            <Text style = { styles.Title }>Crear una cuenta</Text>
-            <Form style = { styles.Form }>
-              <Item style = { styles.Item } floatingLabel>
-                <Label style = { styles.Label }>Username</Label>
-                <Input
-                  style = { styles.Input }
-                  onChangeText = { (value) => this.setState({username: value }) }
-                  value = {username}
-                  floatingLabel
-                  />
-              </Item>
-              <Item style = { styles.Item} floatingLabel>
-                <Label style = { styles.Label }>Correo Electronico</Label>
-                <Input
-                  style = { styles.Input }
-                  onChangeText = { (value) => this.setState({email: value }) }
-                  value = {email}
-                  floatingLabel
-                  />
-              </Item>
-              <Item style = { styles.Item } floatingLabel>
-                <Label style = { styles.Label }>Password</Label>                
-                <Input
-                  style = { styles.Input }
-                  onChangeText = { (value)=> this.setState({password: value})}
-                  value = {password}
-                  />
-              </Item>
-              <View style = {styles.Botones }>
-                <View style = {styles.Pregunta}> 
-                  <Text style = { styles.PreguntaText }>¿Tienes una cuenta?</Text>
-                  <Text style = { styles.IniciarSession }>Iniciar Sesion</Text>
-                </View>
-                <TouchableHighlight
-                  style = { styles.BotonRegistrar }
-                  >
-                  <Text style = { styles.BotonRegistrarText }>REGISTRAR</Text>
-                </TouchableHighlight>
-              </View>
-            </Form>
+      <View style = { styles.Container }>
+        <View style = { styles.Content } >
+          <Text style = { styles.Title }> Foodemy </Text>
+          <Robot1/>
+          <View style = {styles.Form}>
+            <View style = { styles.GroupInput }>
+              <Text style = {styles.Label}>Nombre de usuario :</Text>
+              <TextInput style = {styles.TextInput}/>
+              <View style = { styles.Line }/>
+            </View>
+            <View style = { styles.GroupInput }>
+              <Text style = {styles.Label}>Correo :</Text>
+              <TextInput style = {styles.TextInput}/>
+              <View style = { styles.Line }/>
+            </View>
+            <View style = { styles.GroupInput }>
+              <Text style = {styles.Label}>Contraseña :</Text>
+              <TextInput style = {styles.TextInput}/>
+              <View style = { styles.Line }/>
+            </View>
+            <Text style = { styles.IniciarSesion }>Iniciar Sesion</Text>
           </View>
-        </Container>
-      </DissmissKeyboard>
+        </View>
+      </View>
     )
   }
 }
-
 const styles = StyleSheet.create({
-  Container:{
-    backgroundColor: colors.primary,
+  Container: {
+    flex: 1,
+    alignItems: 'center',
+  },
+  Content: {
+    marginTop: 60,
     alignItems: 'center'
   },
-  Content:{
-    width: '90%',
-    marginTop: 24
+  Title:{
+    fontSize: 64,
+    fontFamily: 'poiret-one-regular',
+    marginBottom: 22,
   },
-  Title: {
-    fontSize: 25,
-    textAlign: 'center',
-    color: 'white',
-    fontWeight: 'bold'
+  Form: {
+    marginTop: 22,
   },
-  Form:{
-    
+  GroupInput:{
+    width: 256,
+    marginBottom: 28,
+    position: 'relative'
   },
-  Item:{
+  Label: {
+    fontFamily: 'poiret-one-regular',
+    fontSize: 14,
+    opacity: 0.5,
+    position: 'absolute'
+  },
+  TextInput:{
 
   },
-  Label:{
-    fontSize: 13
+  Line:{
+    borderWidth: 0.5,
+    opacity: 0.2
   },
-  Input:{
-  },
-  Botones:{
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginTop: 24
-  },
-  Pregunta: {
-
-  },
-  PreguntaText:{
-    fontWeight: 'bold',
-    color: 'white'
-  },
-  IniciarSession:{
-    color: 'blue',
-    margin: 4
-  },
-  BotonRegistrar:{
-    padding: 16,
-    backgroundColor: colors.secondary,
-    borderRadius: 4
-  },
-  BotonRegistrarText:{
-    color: 'white'
+  IniciarSesion: {
+    fontFamily: 'hind-bold',
+    fontSize: 24,
+    textAlign: 'center'
   }
-
-
-
 });

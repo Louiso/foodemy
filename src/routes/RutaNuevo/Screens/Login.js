@@ -1,107 +1,68 @@
 import React, { Component } from 'react'
-import { 
-  Text,
-  View,
-  ImageBackground,
-  TouchableHighlight,
-  StyleSheet
-} from 'react-native'
-
-import { 
-  Form,
-  Item,
-  Input,
-  Label
-} from 'native-base';
-import fondo from '../../../../assets/fondo.png';
-
-import DissmissKeyboard from '../../../components/DissmissKeyboard';
-import colors from '../../../Theme/Tema1';
+import { Text, View, StyleSheet, TextInput } from 'react-native'
+import Robot1 from '../../../components/Robot1';
 
 export default class Login extends Component {
-  state = {
-    username: '',
-    password: ''
-  }
-  clickLogin = () => {
-    const { navigation } = this.props;
-    navigation.navigate('Progreso');
-  }
-  clickRegister = () => {
-    const { navigation } = this.props;
-    navigation.navigate('Register');
-  }
   render() {
-    const  { username , password } = this.state;
     return (
-      <DissmissKeyboard>
-        <ImageBackground source={fondo} style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center'}}>
-          <Form style = { styles.Form }>
-              <Item style = { styles.Item} last floatingLabel>
-                <Label>Username</Label>
-                <Input
-                  style = { styles.Input }
-                  onChangeText = { (value) => this.setState({username: value }) }
-                  value = {username}
-                  floatingLabel
-                  />
-              </Item>
-              <Item style = { styles.Item } last floatingLabel>
-                <Label>Password</Label>                
-                <Input
-                  style = { styles.Input }
-                  onChangeText = { (value)=> this.setState({password: value})}
-                  value = {password}
-                  />
-              </Item>
-              <View style = {styles.Botones }>
-                <TouchableHighlight
-                  style = { styles.BotonLogin }
-                  onPress = { this.clickLogin }>
-                  <Text style = { styles.BotonLoginText }>Iniciar Session</Text>
-                </TouchableHighlight>
-                <Text style = { styles.Registrar } onPress = { this.clickRegister }>Registrar</Text>
-              </View>
-            </Form>
-        </ImageBackground>
-      </DissmissKeyboard>
+      <View style = { styles.Container }>
+        <View style = { styles.Content } >
+          <Text style = { styles.Title }> Foodemy </Text>
+          <Robot1/>
+          <View style = {styles.Form}>
+            <View style = { styles.GroupInput }>
+              <Text style = {styles.Label}>Correo :</Text>
+              <TextInput style = {styles.TextInput}/>
+              <View style = { styles.Line }/>
+            </View>
+            <View style = { styles.GroupInput }>
+              <Text style = {styles.Label}>Contraseña :</Text>
+              <TextInput style = {styles.TextInput}/>
+              <View style = { styles.Line }/>
+            </View>
+            <Text style = { styles.IniciarSesion }>Iniciar Sesion</Text>
+          </View>
+        </View>
+      </View>
     )
   }
 }
-
 const styles = StyleSheet.create({
-  Form:{
-    width: '80%',
+  Container: {
+    flex: 1,
     alignItems: 'center',
   },
-  Item:{
-    width: '100%',
-    backgroundColor: 'rgba(255,255,255,0.8)'
-  },
-  Input:{
-    width: '100%',
-    borderRadius: 5,
-  },
-  Botones:{
-    width: '100%',
-    flexDirection: 'row',
-    marginTop: 16,
-    justifyContent: 'space-around',
+  Content: {
+    marginTop: 60,
     alignItems: 'center'
   },
-  BotonLogin:{
-    padding: 8,
-    backgroundColor: colors.secondary,
-    borderRadius: 5,
+  Title:{
+    fontSize: 64,
+    fontFamily: 'poiret-one-regular',
+    marginBottom: 40,
   },
-  BotonLoginText:{
-    color: 'white',
-    textAlign: 'center'
-  }, 
-  Registrar:{
-    color: 'blue',
-    textDecorationLine: 'underline',
+  Form: {
+    marginTop: 40,
+  },
+  GroupInput:{
+    width: 256,
+    marginBottom: 28,
+  },
+  Label: {
+    fontFamily: 'poiret-one-regular',
+    fontSize: 14,
+    opacity: 0.5
+  },
+  TextInput:{
+
+  },
+  Line:{
+    borderWidth: 0.5,
+    opacity: 0.2
+  },
+  IniciarSesion: {
+    fontFamily: 'hind-bold',
+    fontSize: 24,
     textAlign: 'center'
   }
-
 });
