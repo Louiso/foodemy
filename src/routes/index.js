@@ -10,7 +10,7 @@ export default createSwitchNavigator({
   RutaAplicacion: RutaAplicacion,
   Prueba: Tema
 },{
-  initialRouteName: 'Prueba'
+  initialRouteName: 'Loader',
 });
 
 

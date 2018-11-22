@@ -3,6 +3,6 @@ import { observable } from 'mobx';
 
 class Store{
 
-  @observable user = 'adaw';
+  @observable user = '';
 }
 export default new Store();

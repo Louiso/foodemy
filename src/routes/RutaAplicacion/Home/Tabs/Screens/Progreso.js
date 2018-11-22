@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { View , StyleSheet , ScrollView } from 'react-native'
-import Robot1 from '../../../../components/Robot1';
+import * as firebase from 'firebase';
 
-import Section from '../../../../components/Section';
+import Robot1 from '../../../../../components/Robot1';
+import Section from '../../../../../components/Section';
 
 const data = [
   {
@@ -43,6 +44,9 @@ const data = [
 ];
 
 export default class Progreso extends Component {
+  componentDidMount(){
+    // console.log(firebase.auth().currentUser);
+  }
   render() {
     return (
       <View style = { styles.Container }>

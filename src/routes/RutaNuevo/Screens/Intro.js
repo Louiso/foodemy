@@ -19,7 +19,11 @@ export default class Intro extends Component {
           <TouchableWithoutFeedback onPress = { this.next }>
             <Text style = { styles.Continuar }>continuar</Text>
           </TouchableWithoutFeedback>
-          <Text style = { styles.IniciarSession }>Tengo Cuenta</Text>
+
+          <TouchableWithoutFeedback onPress = { ()=> this.props.navigation.navigate('Login') }>
+            <Text style = { styles.IniciarSession }>Tengo Cuenta</Text>
+          </TouchableWithoutFeedback>
+          
         </View>
       </View>
     )

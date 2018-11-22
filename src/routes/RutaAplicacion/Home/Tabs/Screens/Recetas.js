@@ -1,14 +1,11 @@
 import React, { Component } from 'react'
 import { Text, View } from 'react-native'
 
-export default class Social extends Component {
-  static navigationOptions = {
-    title: 'Social'
-  };
+export default class Recetas extends Component {
   render() {
     return (
       <View>
-        <Text> textInComponent </Text>
+        <Text> Recetas </Text>
       </View>
     )
   }

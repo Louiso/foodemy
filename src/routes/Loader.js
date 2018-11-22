@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { View, ActivityIndicator , StyleSheet } from 'react-native'
-import { observer , inject } from 'mobx-react'
 import colors from '../Theme/Tema1';
 import { Font } from 'expo';
 
-@inject('store') @observer 
+import * as firebase from 'firebase';
+
 export default class Loader extends Component {
   async componentDidMount() {
     await Font.loadAsync({
@@ -16,8 +16,14 @@ export default class Loader extends Component {
       'hind-semi-bold': require('../../assets/fonts/Hind-SemiBold.ttf'),
       
     });
-    const { navigation , store : { user } } = this.props;
-    navigation.navigate(user? 'RutaAplicacion': 'RutaNuevo');
+    const { navigation } = this.props;
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user != null) {
+        navigation.navigate('RutaAplicacion');
+      }else{
+        navigation.navigate('RutaNuevo');
+      }
+    });
   }
   render() {
     return (
