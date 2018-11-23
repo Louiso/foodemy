@@ -5,7 +5,9 @@
 <path d="M95 95C95 92.2386 97.2386 90 100 90H120C122.761 90 125 92.2386 125 95V100H95V95Z" fill="black"/>
 <rect x="85" y="30" width="50" height="50" rx="5" fill="#C4C4C4"/>
 <rect x="105" y="10" width="10" height="10" fill="#C4C4C4"/>
+
 <path d="M60 0H160V5C160 7.76142 157.761 10 155 10H65C62.2386 10 60 7.76142 60 5V0Z" fill="black"/>
+
 <path d="M95 25C95 22.2386 97.2386 20 100 20H120C122.761 20 125 22.2386 125 25V30H95V25Z" fill="black"/>
 <rect x="60" y="100" width="100" height="100" rx="10" fill="#C4C4C4"/>
 <rect x="110" y="115" width="45" height="30" rx="6" fill="black"/>

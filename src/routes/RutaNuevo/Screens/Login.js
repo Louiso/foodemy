@@ -9,6 +9,7 @@ import 'firebase/auth';
 import InputValidator from '../../../helpers/InputValidator';
 import { TestDefault } from '../../../helpers/utils';
 import validator from 'validator';
+import ViewForm from '../../../components/ViewForm';
 
 export default class Login extends Component {
   state = {
@@ -58,7 +59,7 @@ export default class Login extends Component {
 
   render() {
     return (
-      <View style = { styles.Container }>
+      <ViewForm>
         <View style = { styles.Content } >
           <Text style = { styles.Title }> Foodemy </Text>
           <Robot1/>
@@ -83,15 +84,11 @@ export default class Login extends Component {
             </TouchableWithoutFeedback>
           </View>
         </View>
-      </View>
+      </ViewForm>
     )
   }
 }
 const styles = StyleSheet.create({
-  Container: {
-    flex: 1,
-    alignItems: 'center',
-  },
   Content: {
     marginTop: 60,
     alignItems: 'center'

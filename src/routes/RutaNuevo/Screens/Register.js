@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
-import { Text, View, StyleSheet, TouchableWithoutFeedback, KeyboardAvoidingView, Dimensions , Button } from 'react-native'
+import { Text, View, StyleSheet, TouchableWithoutFeedback, Button } from 'react-native'
 import Robot1 from '../../../components/Robot1';
 import Input from '../../../components/Input';
 import validator from 'validator';
 import * as firebase from 'firebase';
-import DissmissKeyboard from '../../../components/DissmissKeyboard';
 import InputValidator from '../../../helpers/InputValidator';
 import { TestDefault, formatError } from '../../../helpers/utils';
-
-const { width , height } = Dimensions.get('window');
+import ViewForm from '../../../components/ViewForm';
 
 export default class Register extends Component {
   state = {
@@ -60,6 +58,9 @@ export default class Register extends Component {
       }else{
         /* Manejo de errores del backend */
         try{
+          this.setState({
+            serverError: 'Registro con exito'
+          });
           await firebase.auth().createUserWithEmailAndPassword(email.value, password.value);
           navigation.navigate('Progreso');
         }catch(e){
@@ -72,47 +73,46 @@ export default class Register extends Component {
   }
   render() {
     return (
-      <KeyboardAvoidingView style = {{flex: 1}} behavior="position" enabled>
-        <DissmissKeyboard>
-          <View style = { styles.Content } >
-            <Text style = { styles.Title }> Foodemy </Text>
-            <Robot1/>
-            <View style = {styles.Form}>
-              <Input 
-                label = "Correo" 
-                name="email" 
-                onChangeText = { this.handleChangeText }
-                error = { this.state.email.errors[0] } 
+      <ViewForm>
+        <View style = { styles.Content } >
+          <Text style = { styles.Title }> Foodemy </Text>
+          <Robot1/>
+          <View style = {styles.Form}>
+            <Input 
+              label = "Correo" 
+              name="email" 
+              onChangeText = { this.handleChangeText }
+              value = { this.state.email.value }
+              error = { this.state.email.errors[0] } 
+            />
+            <Input 
+              label = "Contraseña" 
+              name="password" 
+              onChangeText = { this.handleChangeText }
+              value = { this.state.password.value } 
+              error = { this.state.password.errors[0] }
               />
-              <Input 
-                label = "Contraseña" 
-                name="password" 
-                onChangeText = { this.handleChangeText }
-                error = { this.state.password.errors[0] }
-                />
-              <Input 
-                label = "Confirmar Contraseña"
-                name= "confirmPassword" 
-                onChangeText = { this.handleChangeText }
-                error = { this.state.confirmPassword.errors[0]}
-              />
-              <Text style = { styles.ErrorServer }>{this.state.serverError}</Text>
-              <Button onPress = {this.register} title = 'Crear Cuenta'/>
-            <TouchableWithoutFeedback onPress = { () => this.props.navigation.navigate('Login') }>
-              <Text style = { styles.CrearCuenta }>Tengo Cuenta?</Text>
-            </TouchableWithoutFeedback>
-            </View>
+            <Input 
+              label = "Confirmar Contraseña"
+              name= "confirmPassword" 
+              onChangeText = { this.handleChangeText }
+              value = { this.state.confirmPassword.value }
+              error = { this.state.confirmPassword.errors[0]}
+            />
+            <Text style = { styles.ErrorServer }>{this.state.serverError}</Text>
+            <Button onPress = {this.register} title = 'Crear Cuenta'/>
+          <TouchableWithoutFeedback onPress = { () => this.props.navigation.navigate('Login') }>
+            <Text style = { styles.CrearCuenta }>Tengo Cuenta?</Text>
+          </TouchableWithoutFeedback>
           </View>
-        </DissmissKeyboard>
-      </KeyboardAvoidingView>
+        </View>
+      </ViewForm>
     )
   }
 }
 const styles = StyleSheet.create({
   Content: {
-    paddingTop: 36,
-    width: width,
-    height: height,
+    marginTop: 36,
     alignItems: 'center'
   },
   Title:{

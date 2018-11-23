@@ -5,24 +5,37 @@ export default class Input extends Component {
   static defaultProps = {
     onChangeText: (value,name) => '',
     name: '',
+    value: ''
   }
   state = {
     spin: new Animated.Value(0),
   }
   handleFocus = () => {
-    Animated.timing(
-      this.state.spin,
-      {
-        toValue: 1
-      }
-    ).start();
+    if(!this.props.value){
+      Animated.timing(
+        this.state.spin,
+        {
+          toValue: 1
+        }
+      ).start();
+    }
   }
   handleBlur = () => {
-    Animated.timing(
-      this.state.spin,{
-        toValue: 0
-      }
-    ).start();
+    if(!this.props.value){
+      Animated.timing(
+        this.state.spin,{
+          toValue: 0
+        }
+      ).start();
+    }
+  }
+  getKeyboard = () => {
+    switch(this.props.name){
+      case 'email':
+        return 'email-address';
+      default:
+        return 'default'
+    }
   }
   
   render() {
@@ -55,13 +68,16 @@ export default class Input extends Component {
           fontSize,
           opacity
         }}>{ label }:</Animated.Text>
-        <TextInput ref = { (textInput)=> this.textInput = textInput }
+        <TextInput
+          keyboardType = { this.getKeyboard() }
+          secureTextEntry = { this.props.name == 'password' || this.props.name == 'confirmPassword' }
           style = {styles.TextInput} 
           onChangeText = { (value) => {
             this.props.onChangeText(value, name);
           } } 
           onFocus = { this.handleFocus }
           onBlur = { this.handleBlur }
+          value = { this.props.value }
           />
         <View style = { styles.Line }/>
         <Text style = { styles.Error }>{ this.props.error } </Text>
