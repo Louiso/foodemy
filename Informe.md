@@ -10,16 +10,23 @@ Se corrigieron y se propusieron mejoras en los aspectos que provocaban mayor con
 * Reestructuración de la informacion. El contenido de los cursos ya no seguira la analagio de libros y paginas si no la de un flujo progresivo para cada curso en perteneciente a tres niveles (basico, intermedio y avanzado). El cual el contenido se ira desbloquendo al pasar por los diferentes temas y completando las preguntas referente a ellos.
 * Cambios en la navegacion: En el flujo de entrada para nuevos usuarios se agrego unas cuantas pantallas que nos daran un feedback de lo que el usauario desea, informacion del usuario y presentar nuestra solucion. La barra de navegecion inferior ahora se cambio a los 3 items que representan nuestras actividaes principales: Muro del usuario,progreso de los cursos (Pagina principla) y social (Publicaciones)).  En el muro principal se agrego un scroll horizontal en la lista de cursos para cada nivel. 
 ## Descripcion del Prototipo
-
+Al iniciar la aplicacion se mostrara una serie pantallas para  usuarios nuevos en la cual se relizara una serie de preguntas y se presentara nuestra solucion.
+Esta puede ser obviado si se tiene una cuenta.
 ![Con titulo](assets\protitipo\Inicio.png 
 "titulo")
 ![Con titulo](assets\protitipo\Inicio2.png 
 "titulo")
 
+Luego Pasaremos a la pestaño de logeo o registro si se ha registrado.
+
+![Imagen 1][1]  ![Imagen 2][2]
+
+ [1]: assets\protitipo\Login3.jpg 
+ [2]: assets\protitipo\Registro4.jpg "scaphandre"
 ![Con titulo](assets\protitipo\Login3.jpg 
 "titulo")
 
-![Con titulo](assets\protitipo\Registro3.jpg 
+![Con titulo](assets\protitipo\Registro4.jpg 
 "titulo")
 
 ![Con titulo](assets\protitipo\Progreso.png
