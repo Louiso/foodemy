@@ -1,6 +1,6 @@
 # Prototipo alta fidelidad
 
-Tras diseñarse el prototipo de baja fidelidad y ser evaluado se comenzo el desarrollo de alta fidelidad. Por un lado se han identifica muchos cambios que en el diseño de  la interracion teniendo un efoque orientado a la experiencia del usuario. Ademas se ha trabajado en los servicios basicos de la aplicacion con un backend.
+Tras diseñarse el prototipo de baja fidelidad y ser evaluado se comenzo el desarrollo de alta fidelidad. Por un lado se han identifica muchos cambios que en el diseño de  la interaccion teniendo un efoque orientado a la experiencia del usuario. Ademas se ha trabajado en los servicios basicos de la aplicacion con un backend.
 
 ## Cambios en el diseño.
 Se corrigieron y se propusieron mejoras en los aspectos que provocaban mayor confusión en los usuarios o no conllevaba una buena experiencia en el usuario.
@@ -17,23 +17,42 @@ Esta puede ser obviado si se tiene una cuenta.
 ![Con titulo](assets\protitipo\Inicio2.png 
 "titulo")
 
-Luego Pasaremos a la pestaño de logeo o registro si se ha registrado.
+Luego Pasaremos a la pestaño de logeo o registro si se ha registrado. Se manejan los errores al llegar los compos de manera visual.
 
 ![Imagen 1][1]  ![Imagen 2][2]
 
  [1]: assets\protitipo\Login3.jpg 
  [2]: assets\protitipo\Registro4.jpg "scaphandre"
-![Con titulo](assets\protitipo\Login3.jpg 
-"titulo")
 
-![Con titulo](assets\protitipo\Registro4.jpg 
-"titulo")
+La pagina principal nuestra barra de navegacion inferior es el progreso . Esta pantalla muestra todos los cursos en los tres niveles que tenemos y el progreso que llevar el usuario. Y el progreso particular en cada curso.
 
 ![Con titulo](assets\protitipo\Progreso.png
 "titulo")
 
+Al ingresar un curso se abrira una pantalla con el contenido del curso. En el cual podras relizar el seguimiento a la lectura , realizar unas cuestionario para desbloquear otros cursos y ver tu progeso.
 ![Con titulo](assets\protitipo\Flujo.png
 "titulo")
+
+Podemos navegar a la parte social donde se encontraran publicaciones. Podra hacer comentarios y dar Me Gusta.
+
+![Con titulo](assets\protitipo\social.png
+"titulo")
+
+Al navegar al muro encontraremos todas nuestras publicaciones, las que nos interaron o guardamos
+![Con titulo](assets\protitipo\muro.png
+"titulo")
+
+
+Atraves del drawer desplegable podemos navegar a nuestro pervil en cual encontraremos nuestra informacion y estadisticas de nuestro progreso. 
+
+![Con titulo](assets\protitipo\drawer.jpg
+"titulo")
+
+![Con titulo](assets\protitipo\perfil.jpg
+"titulo")
+
+
+
 ## Especificaciones de la Usabilibilidad
 
 ## Plan de de Evaluacion inicial.
