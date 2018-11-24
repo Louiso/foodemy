@@ -7,7 +7,7 @@
 
 # Prototipo alta fidelidad
 
-Tras diseñarse el prototipo de baja fidelidad y ser evaluado se comenzo el desarrollo de alta fidelidad. Por un lado se han identifica muchos cambios que en el diseño de  la interracion teniendo un efoque orientado a la experiencia del usuario. Ademas se ha trabajado en los servicios basicos de la aplicacion con un backend.
+Tras diseñarse el prototipo de baja fidelidad y ser evaluado se comenzo el desarrollo de alta fidelidad. Por un lado se han identifica muchos cambios que en el diseño de  la interaccion teniendo un efoque orientado a la experiencia del usuario. Ademas se ha trabajado en los servicios basicos de la aplicacion con un backend.
 
 ## Cambios en el diseño.
 
@@ -28,17 +28,17 @@ Esta puede ser obviado si se tiene una cuenta.
 ![Con titulo](assets/protitipo/Inicio2.png 
 "titulo")
 
-Luego Pasaremos a la pestaño de logeo o registro si se ha registrado.
+Luego Pasaremos a la pestaño de logeo o registro si se ha registrado. Se manejan los errores al llegar los compos de manera visual.
 
 ![Imagen 1][1]  ![Imagen 2][2]
 
  [1]: assets/protitipo/Login3.jpg
  [2]: assets/protitipo/Registro4.jpg "scaphandre"
 
-![Imagen 1][1]  ![Imagen 2][2]
+![Imagen 1][3]  ![Imagen 2][4]
 
- [1]: assets/protitipo/Progreso.png
- [2]: assets/protitipo/flujo.png "scaphandre"
+ [3]: assets/protitipo/Progreso.png
+ [4]: assets/protitipo/flujo.png "scaphandre"
 
 ## Especificaciones de la Usabilibilidad
 
